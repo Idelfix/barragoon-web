@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102b29">
+<title>Barragoon — Jeder Zug verändert den Weg.</title>
+<meta name="description" content="Spiele Barragoon direkt im Browser: ein taktisches Duell mit Figuren, Wegen und überraschenden Wendungen. Gegen die KI oder zu zweit an einem Bildschirm.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead"><a href="#" class="brand" aria-label="Barragoon Startseite"><span class="mark" aria-hidden="true">↱</span>BARRAGOON</a><nav aria-label="Hauptnavigation"><a href="#spiel">Spielen</a><a href="#so-gehts">So geht’s</a><span class="edition">DAS TAKTISCHE DUELL</span></nav></header>
+<main>
+<section class="intro"><div><p class="eyebrow"><span></span> EIN BRETT. ZWEI KÖPFE. NEUE WEGE.</p><h1>Jeder Zug verändert<br>den <em>Weg.</em></h1></div><p class="intro-copy">Vorausdenken. Wege öffnen. Den anderen überraschen. Dein nächstes Duell beginnt direkt hier im Browser.</p></section>
+<section id="spiel" class="game-section" aria-label="Barragoon spielen">
+<div class="game-bar"><div class="game-label"><span class="live-dot"></span> DAS SPIELBRETT <span class="bar-divider">/</span> <span class="quiet">UNITY WEBGL</span></div><button id="fullscreen" class="text-button" disabled aria-label="Spiel im Vollbild öffnen">Vollbild <span aria-hidden="true">⛶</span></button></div>
+<div class="game-stage" id="game-stage">
+<canvas id="unity-canvas" tabindex="0" aria-label="Barragoon-Spielbrett. Mit Maus oder Touch bedienen."></canvas>
+<div id="cover" class="cover"><img src="./assets/board.png" alt="Holzspielbrett mit hellen und dunklen Figuren auf petrolfarbenem Hintergrund" class="board-image"><div class="cover-shade"></div><div class="cover-content"><span class="cover-kicker">DEIN PLATZ AM BRETT</span><h2>Ein guter Zug<br>beginnt mit dir.</h2><button id="play" class="play-button">Spiel starten <span aria-hidden="true">↗</span></button><p>Gegen die KI oder zu zweit an einem Bildschirm.</p></div><span class="cover-corner">7 × 9 FELDER. UNZÄHLIGE MÖGLICHKEITEN.</span></div>
+<div id="loading" class="loading" hidden role="status" aria-live="polite"><span class="loading-mark" aria-hidden="true">↱</span><h2>Das Brett wird vorbereitet.</h2><p id="loading-message">Das Spiel wird geladen. Beim ersten Mal dauert es einen Moment.</p><progress id="progress" max="1" value="0" aria-label="Ladefortschritt"></progress><span id="percent">0 %</span></div>
+<div id="error" class="error" hidden role="alert"><h2>Das Spiel konnte nicht starten.</h2><p id="error-message"></p><button id="retry" class="play-button">Erneut versuchen ↗</button></div>
+</div>
+<div class="game-foot"><span><span class="key">↖</span> Figur wählen · Zielfeld anklicken</span><span><span class="key">ESC</span> Menü öffnen</span><span class="desktop-note">Am besten am Desktop im Querformat.</span></div>
+</section>
+<section class="details" id="so-gehts"><div class="details-heading"><p class="eyebrow">DIE IDEE IST EINFACH.</p><h2>Dein Ziel. Dein Zug.<br>Dein <em>Plan.</em></h2><p>Die Barragoons verändern die Wege auf dem Brett. Nutze sie, um deine Figuren voranzubringen und die andere Seite auszubremsen.</p></div><div class="steps"><article><span class="step-number">01</span><div><h3>Wähle dein Duell.</h3><p>Spiele gegen die KI oder teile das Brett mit einer zweiten Person. Die KI bietet die Stufen Anfänger und Taktisch.</p></div></article><article><span class="step-number">02</span><div><h3>Lies die Wege.</h3><p>Die goldenen Punkte zeigen die Zugweite deiner Figur. Die Symbole auf den Barragoons bestimmen, welche Wege offen sind. Gültige Ziele werden markiert.</p></div></article><article><span class="step-number">03</span><div><h3>Verändere das Spiel.</h3><p>Beim Platzieren wählst du Symbol, Drehung und Feld. Prüfe die Vorschau und bestätige. Gewinne, wenn die andere Seite keine Figur oder keinen legalen Zug mehr hat.</p></div></article><p class="rules-note">Die ausführliche Spielhilfe findest du unter „Regeln“ im Spiel. Der Prototyp bildet noch nicht alle Turnier-Sonderfälle ab.</p></div></section>
+<section class="smallprint"><span class="mini-mark" aria-hidden="true">↱</span><div><h3>Ein Bildschirm reicht.</h3><p>Kein Download, keine Installation. Musik und Lautstärke stellst du im Spiel ein. Deine Toneinstellungen werden auf diesem Gerät gespeichert.</p></div><a href="#spiel">Zurück ans Brett <span aria-hidden="true">↑</span></a></section>
+</main>
+<footer><a class="footer-wordmark" href="#">BARRAGOON</a><p>Digitaler Spielprototyp · Lokales Spiel · Kein Online-Multiplayer</p><span>MIT PLAN SPIELEN.</span></footer>
+<script src="./build-config.js"></script><script src="./app.js"></script>
+</body></html>
